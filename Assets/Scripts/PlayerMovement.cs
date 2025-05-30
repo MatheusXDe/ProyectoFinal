@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private float gravity = -5.0f;
     Vector3 gravityJump;
     public float jumpForce;
+    private Collider SwordCollider;
 
 
     void Start()
@@ -21,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         characterController = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
+        SwordCollider = GameObject.FindGameObjectWithTag("SwordKnight").GetComponent<Collider>();
+        SwordCollider.GetComponent<Collider>().enabled = false; 
     }
 
 
@@ -98,13 +101,20 @@ public class PlayerMovement : MonoBehaviour
 
 
     }
-    void GoAtack ()
+    void GoAtack()
     {
-       moveSpeed = 0; 
+        moveSpeed = 0;
+         
     }
-    void EndAtack ()
+    void SwordContact()
     {
-       moveSpeed = 5; 
-       animator.SetBool("Atack", false); 
+        SwordCollider.GetComponent<Collider>().enabled = true;
+         
+    }
+    void EndAtack()
+    {
+        moveSpeed = 5;
+        animator.SetBool("Atack", false);
+        SwordCollider.GetComponent<Collider>().enabled = false; 
     }
 }
