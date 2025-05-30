@@ -2,13 +2,15 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - Floor
+  - Blacksmith
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Floor
   - Water
   - UI
   - 
@@ -41,6 +43,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BG1
+    uniqueID: 3746472359
+    locked: 0
+  - name: BG
+    uniqueID: 2644920379
+    locked: 0
+  - name: Player
+    uniqueID: 4023548267
+    locked: 0
+  - name: Entities
+    uniqueID: 3642708359
+    locked: 0
+  - name: UI
+    uniqueID: 282704441
+    locked: 0
+  - name: UI1
+    uniqueID: 1653466291
+    locked: 0
   m_RenderingLayers:
   - Default
   - Light Layer 1
@@ -50,27 +70,3 @@ TagManager:
   - Light Layer 5
   - Light Layer 6
   - Light Layer 7
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
