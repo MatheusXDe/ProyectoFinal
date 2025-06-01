@@ -47,6 +47,7 @@ public class PlayerMovementBarbarian : MonoBehaviour
     {
         Movement();
         animator.SetBool("Jump", false);
+        animator.SetBool("Atack", false);
 
     }
 

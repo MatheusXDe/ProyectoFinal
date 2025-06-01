@@ -15,6 +15,8 @@ public class PlayerMovementMage : MonoBehaviour
     Vector3 gravityJump;
     public float jumpForce;
     bool mageAtack;
+    public GameObject magePrefab;
+    private Transform baculeMage;
 
 
 
@@ -26,6 +28,7 @@ public class PlayerMovementMage : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
         mageAtack = animator.GetBool("Atack");
+        baculeMage = GameObject.FindGameObjectWithTag("BaculeMage").GetComponent<Transform>();
 
     }
 
@@ -43,11 +46,13 @@ public class PlayerMovementMage : MonoBehaviour
         {
             animator.SetBool("Atack", true);
         }
+        
     }
     void FixedUpdate()
     {
         Movement();
         animator.SetBool("Jump", false);
+        animator.SetBool("Atack", false);
 
     }
 
@@ -107,12 +112,18 @@ public class PlayerMovementMage : MonoBehaviour
     void GoAtack()
     {
         moveSpeed = 0;
-         
+
     }
-    
+
     void EndAtack()
     {
         moveSpeed = 5;
-        animator.SetBool("Atack", false); 
+        animator.SetBool("Atack", false);
+    }
+    void InstantiateBall()
+    {
+        Instantiate(magePrefab, baculeMage.transform.position, transform.rotation);
+        
+        
     }
 }

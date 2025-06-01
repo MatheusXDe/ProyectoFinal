@@ -519,6 +519,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3327415615574490268, guid: 3137f8384de1c804b93525a819b63831, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7764210471732050034, guid: 3137f8384de1c804b93525a819b63831, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.93
@@ -535,9 +539,43 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 2677596514934467036, guid: 3137f8384de1c804b93525a819b63831, type: 3}
     - {fileID: 2255837369287497005, guid: 3137f8384de1c804b93525a819b63831, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2428443958506694940, guid: 3137f8384de1c804b93525a819b63831, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 525706824}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3137f8384de1c804b93525a819b63831, type: 3}
+--- !u!1 &525706823
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 525706824}
+  m_Layer: 0
+  m_Name: Bacule
+  m_TagString: BaculeMage
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &525706824
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525706823}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.978, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 809418401}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &622852839
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,6 +708,12 @@ MonoBehaviour:
   rayDistance: 1.2
   moveSpeed: 5
   jumpForce: 20
+  magePrefab: {fileID: 7176931207917712023, guid: 31bacb2c4a5e8124a93022d59e728052, type: 3}
+--- !u!4 &809418401 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2428443958506694940, guid: 3137f8384de1c804b93525a819b63831, type: 3}
+  m_PrefabInstance: {fileID: 316459394}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &915464370
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,6 +846,38 @@ MonoBehaviour:
   rayDistance: 1.2
   moveSpeed: 5
   jumpForce: 20
+  roguePrefab: {fileID: 5719573102244415301, guid: 07bc0011deabb2e4f9bd0120432cafd5, type: 3}
+--- !u!1 &993035867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 993035868}
+  m_Layer: 0
+  m_Name: ArmRogue
+  m_TagString: ArmRogue
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &993035868
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993035867}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -0.778, y: 0.123, z: -0.021}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1053425660}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &1043126944
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,6 +1027,11 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 0
+--- !u!4 &1053425660 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6328476470596349915, guid: 08aad9375c68e5244a0794735dd19a75, type: 3}
+  m_PrefabInstance: {fileID: 3358126662876276863}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1132034824
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1680,7 +1761,10 @@ PrefabInstance:
     - {fileID: 782705683434683602, guid: 08aad9375c68e5244a0794735dd19a75, type: 3}
     - {fileID: -3606650129264159978, guid: 08aad9375c68e5244a0794735dd19a75, type: 3}
     - {fileID: -695009955411471175, guid: 08aad9375c68e5244a0794735dd19a75, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6328476470596349915, guid: 08aad9375c68e5244a0794735dd19a75, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 993035868}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08aad9375c68e5244a0794735dd19a75, type: 3}
 --- !u!1660057539 &9223372036854775807
@@ -1694,5 +1778,5 @@ SceneRoots:
   - {fileID: 915464372}
   - {fileID: 622852841}
   - {fileID: 1376274143}
-  - {fileID: 1043126949}
   - {fileID: 153477329}
+  - {fileID: 1043126949}

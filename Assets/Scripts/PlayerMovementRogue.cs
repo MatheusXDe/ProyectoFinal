@@ -15,6 +15,8 @@ public class PlayerMovementRogue : MonoBehaviour
     Vector3 gravityJump;
     public float jumpForce;
     bool rogueAtack;
+    public GameObject roguePrefab;
+    private Transform armRogue;
 
 
 
@@ -26,6 +28,7 @@ public class PlayerMovementRogue : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
         rogueAtack = animator.GetBool("Atack");
+        armRogue = GameObject.FindGameObjectWithTag("ArmRogue").GetComponent<Transform>();
 
     }
 
@@ -42,12 +45,14 @@ public class PlayerMovementRogue : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F) && rogueAtack == false)
         {
             animator.SetBool("Atack", true);
+            
         }
     }
     void FixedUpdate()
     {
         Movement();
         animator.SetBool("Jump", false);
+        animator.SetBool("Atack", false);
 
     }
 
@@ -107,12 +112,17 @@ public class PlayerMovementRogue : MonoBehaviour
     void GoAtack()
     {
         moveSpeed = 0;
-         
+
     }
-    
+
     void EndAtack()
     {
         moveSpeed = 5;
-        animator.SetBool("Atack", false); 
+        animator.SetBool("Atack", false);
+    }
+    void InstantiateRogue()
+    {
+        Instantiate(roguePrefab, armRogue.transform.position, armRogue.transform.rotation);
+        
     }
 }

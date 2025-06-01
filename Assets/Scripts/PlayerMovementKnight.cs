@@ -47,6 +47,7 @@ public class PlayerMovementKnight : MonoBehaviour
     {
         Movement();
         animator.SetBool("Jump", false);
+        animator.SetBool("Atack", false);
 
     }
 

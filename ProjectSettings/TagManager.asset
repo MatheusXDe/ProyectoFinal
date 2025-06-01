@@ -6,6 +6,8 @@ TagManager:
   tags:
   - SwordKnight
   - AxeBarbarian
+  - BaculeMage
+  - ArmRogue
   layers:
   - Default
   - TransparentFX
