@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovementBarbarian : MonoBehaviour
 {
     private CharacterController characterController;
     private PlayerInput playerInput;
@@ -14,7 +14,8 @@ public class PlayerMovement : MonoBehaviour
     private float gravity = -5.0f;
     Vector3 gravityJump;
     public float jumpForce;
-    private Collider SwordCollider;
+    private Collider axeCollider;
+    bool axeAtack;
 
 
     void Start()
@@ -22,8 +23,9 @@ public class PlayerMovement : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         characterController = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
-        SwordCollider = GameObject.FindGameObjectWithTag("SwordKnight").GetComponent<Collider>();
-        SwordCollider.GetComponent<Collider>().enabled = false; 
+        axeCollider = GameObject.FindGameObjectWithTag("AxeBarbarian").GetComponent<Collider>();
+        axeCollider.GetComponent<Collider>().enabled = false;
+        axeAtack = animator.GetBool("Atack");
     }
 
 
@@ -36,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
             Jump();
             animator.SetBool("Jump", true);
         }
-        if (Input.GetKey(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) && axeAtack == false)
         {
             animator.SetBool("Atack", true);
         }
@@ -106,15 +108,15 @@ public class PlayerMovement : MonoBehaviour
         moveSpeed = 0;
          
     }
-    void SwordContact()
+    void AxeContact()
     {
-        SwordCollider.GetComponent<Collider>().enabled = true;
+        axeCollider.GetComponent<Collider>().enabled = true;
          
     }
     void EndAtack()
     {
         moveSpeed = 5;
         animator.SetBool("Atack", false);
-        SwordCollider.GetComponent<Collider>().enabled = false; 
+        axeCollider.GetComponent<Collider>().enabled = false; 
     }
 }
