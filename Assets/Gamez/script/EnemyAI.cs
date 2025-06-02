@@ -7,7 +7,7 @@ public class EnemyAI : MonoBehaviour
     public Transform jugador;
     private NavMeshAgent agente;
     private EnemyAnimation animacion;
-    public float distanciaDeteccion = 10f;
+    public float distanciaDeteccion ;
     public float distanciaAtaque = 2f;
     private bool estaMuerto = false;
     private bool jugadorDetectado = false;
