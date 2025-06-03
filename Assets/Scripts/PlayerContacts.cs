@@ -6,7 +6,7 @@ public class PlayerContacts : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("Into Blacksmith? " + isEnter);
+        UIManager.Call.BSmithOn(isEnter);
     }
     private void OnTriggerEnter(Collider other)
     {
