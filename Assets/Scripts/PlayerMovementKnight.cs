@@ -24,7 +24,7 @@ public class PlayerMovementKnight : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
         SwordCollider = GameObject.FindGameObjectWithTag("SwordKnight").GetComponent<Collider>();
-        SwordCollider.GetComponent<Collider>().enabled = false; 
+        SwordCollider.GetComponent<Collider>().enabled = false;
         swordAtack = animator.GetBool("Atack");
     }
 
@@ -107,17 +107,27 @@ public class PlayerMovementKnight : MonoBehaviour
     void GoAtack()
     {
         moveSpeed = 0;
-         
+
     }
     void SwordContact()
     {
         SwordCollider.GetComponent<Collider>().enabled = true;
-         
+
     }
     void EndAtack()
     {
         moveSpeed = 5;
         animator.SetBool("Atack", false);
-        SwordCollider.GetComponent<Collider>().enabled = false; 
+        SwordCollider.GetComponent<Collider>().enabled = false;
+    }
+    
+    void OnTriggerEnter(Collider other)
+{
+    if (other.CompareTag("Enemy") && animator.GetBool("Atack")) 
+    {
+        other.GetComponent<EnemyAI>().Morir(); // Llamar la función Morir en el enemigo
     }
 }
+
+}
+
