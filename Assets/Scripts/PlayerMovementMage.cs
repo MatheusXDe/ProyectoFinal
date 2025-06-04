@@ -10,7 +10,7 @@ public class PlayerMovementMage : MonoBehaviour
     public LayerMask groundLayer;
     public float rayDistance;
     private Vector2 inputs;
-    [SerializeField] private float moveSpeed = 5;
+    [SerializeField] private float moveSpeed = 20;
     private float gravity = -5.0f;
     Vector3 gravityJump;
     public float jumpForce;
@@ -104,7 +104,7 @@ public class PlayerMovementMage : MonoBehaviour
         if (IsOnGround() && gravity < 0)
         {
             // Mantener al jugador pegado al suelo con una pequeña fuerza hacia abajo
-            gravity = -3.0f;
+            gravity = -5.0f;
         }
 
 
@@ -117,7 +117,7 @@ public class PlayerMovementMage : MonoBehaviour
 
     void EndAtack()
     {
-        moveSpeed = 5;
+        moveSpeed = 20;
         animator.SetBool("Atack", false);
     }
     void InstantiateBall()

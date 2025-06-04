@@ -16,7 +16,7 @@ public class PruebaCollider : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
         Debug.Log("Funciona");
-        Destroy(gameObject);
+        
     }    
         
     

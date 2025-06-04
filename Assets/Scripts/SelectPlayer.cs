@@ -32,7 +32,7 @@ public class SelectPlayer : MonoBehaviour
         }
 
     }
-    void SelectKnight()
+    public void SelectKnight()
     {
         Knight.gameObject.SetActive(true);
         Barbarian.gameObject.SetActive(false);
@@ -40,7 +40,7 @@ public class SelectPlayer : MonoBehaviour
         Rogue.gameObject.SetActive(false);
 
     }
-    void SelectBarbarian()
+    public void SelectBarbarian()
     {
         Knight.gameObject.SetActive(false);
         Barbarian.gameObject.SetActive(true);
@@ -48,7 +48,7 @@ public class SelectPlayer : MonoBehaviour
         Rogue.gameObject.SetActive(false);
 
     }
-    void SelectMage()
+    public void SelectMage()
     {
         Knight.gameObject.SetActive(false);
         Barbarian.gameObject.SetActive(false);
@@ -56,7 +56,7 @@ public class SelectPlayer : MonoBehaviour
         Rogue.gameObject.SetActive(false);
 
     }
-    void SelectRogue()
+    public void SelectRogue()
     {
         Knight.gameObject.SetActive(false);
         Barbarian.gameObject.SetActive(false);
