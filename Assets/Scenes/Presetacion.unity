@@ -22976,9 +22976,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 876787184501508252, guid: f575427be3d386f44acc1e00e3954ffa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 876787184501508252, guid: f575427be3d386f44acc1e00e3954ffa, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 2004493618221098079, guid: f575427be3d386f44acc1e00e3954ffa, type: 3}
       propertyPath: m_Name
       value: SelectPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443281439982115145, guid: f575427be3d386f44acc1e00e3954ffa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443281439982115145, guid: f575427be3d386f44acc1e00e3954ffa, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4060257740174302862, guid: f575427be3d386f44acc1e00e3954ffa, type: 3}
       propertyPath: camera
@@ -22992,6 +23008,14 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 330585546}
+    - target: {fileID: 7636194879476136040, guid: f575427be3d386f44acc1e00e3954ffa, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8953563950755308153, guid: f575427be3d386f44acc1e00e3954ffa, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
