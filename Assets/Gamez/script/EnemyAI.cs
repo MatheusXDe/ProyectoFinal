@@ -53,6 +53,7 @@ public class EnemyAI : MonoBehaviour
                 animacion.SetCorrer(false);
                 animacion.SetAtacar(true);
             }
+            
         }
     }
 
