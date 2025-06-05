@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
+using System.IO.Compression;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class EnemyAI : MonoBehaviour
 
     void Start()
     {
+        
         agente = GetComponent<NavMeshAgent>();
         animacion = GetComponent<EnemyAnimation>();
         animacion.SetPreparacion(false);
@@ -23,7 +25,8 @@ public class EnemyAI : MonoBehaviour
     }
 
     void Update()
-    {
+    {   //Pendiente cambiar cuando este la parte de seleccion de personaje:
+        jugador = GameObject.FindWithTag("Player").GetComponent<Transform>();
         if (estaMuerto) return;
 
         float distancia = Vector3.Distance(transform.position, jugador.position);
