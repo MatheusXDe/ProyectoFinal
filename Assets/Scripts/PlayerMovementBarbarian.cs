@@ -107,17 +107,17 @@ public class PlayerMovementBarbarian : MonoBehaviour
     void GoAtack()
     {
         moveSpeed = 0;
-         
+
     }
     void AxeContact()
     {
         axeCollider.GetComponent<Collider>().enabled = true;
-         
+
     }
     void EndAtack()
     {
         moveSpeed = 20;
         animator.SetBool("Atack", false);
-        axeCollider.GetComponent<Collider>().enabled = false; 
+        axeCollider.GetComponent<Collider>().enabled = false;
     }
 }

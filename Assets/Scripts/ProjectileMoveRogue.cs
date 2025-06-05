@@ -17,10 +17,10 @@ public class ProjectileMoveRogue : MonoBehaviour
    {
       transform.Translate(Vector3.down * Time.deltaTime * speed);
 
-      topBoundX = ArmRogue.transform.position.x + 10.0f;
-      lowerBoundX = ArmRogue.transform.position.x + -10.0f;
-      topBoundZ = ArmRogue.transform.position.z + 10.0f;
-      lowerBoundZ = ArmRogue.transform.position.z + -10.0f;
+      topBoundX = ArmRogue.transform.position.x + 20.0f;
+      lowerBoundX = ArmRogue.transform.position.x + -20.0f;
+      topBoundZ = ArmRogue.transform.position.z + 20.0f;
+      lowerBoundZ = ArmRogue.transform.position.z + -20.0f;
 
       if (transform.position.x > topBoundX)
       {
@@ -40,5 +40,16 @@ public class ProjectileMoveRogue : MonoBehaviour
       }
     
    }
+   void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            EnemyAI enemy = other.GetComponent<EnemyAI>();
+            if (enemy != null)
+            {
+                enemy.Morir();  // Llamar la función de muerte en el enemigo
+            }
+        }
+    }
     
 }

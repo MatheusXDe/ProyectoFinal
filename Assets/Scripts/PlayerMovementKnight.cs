@@ -121,13 +121,5 @@ public class PlayerMovementKnight : MonoBehaviour
         SwordCollider.GetComponent<Collider>().enabled = false;
     }
     
-    void OnTriggerEnter(Collider other)
-{
-    if (other.CompareTag("Enemy") && animator.GetBool("Atack")) 
-    {
-        other.GetComponent<EnemyAI>().Morir(); // Llamar la función Morir en el enemigo
-    }
-}
-
 }
 
