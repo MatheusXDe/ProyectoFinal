@@ -79,7 +79,7 @@ MonoBehaviour:
   moveSpeed: 20
   gravity: -0.9
   fallVelocity: 0
-  jumpForce: 500
+  jumpForce: 9
   magePrefab: {fileID: 7176931207917712023, guid: 31bacb2c4a5e8124a93022d59e728052, type: 3}
 --- !u!143 &4047235881314905883
 CharacterController:
@@ -349,11 +349,11 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 4294967295
-  rayDistance: 5
+  rayDistance: 5.1
   moveSpeed: 20
   gravity: -0.9
   fallVelocity: 0
-  jumpForce: 500
+  jumpForce: 9
 --- !u!1 &3460809457073293522
 GameObject:
   m_ObjectHideFlags: 0
@@ -1499,7 +1499,7 @@ MonoBehaviour:
   moveSpeed: 20
   gravity: -0.9
   fallVelocity: 0
-  jumpForce: 500
+  jumpForce: 9
 --- !u!1 &8953563950755308153
 GameObject:
   m_ObjectHideFlags: 0
@@ -1579,7 +1579,7 @@ MonoBehaviour:
   moveSpeed: 20
   gravity: -0.9
   fallVelocity: 0
-  jumpForce: 500
+  jumpForce: 9
   roguePrefab: {fileID: 5719573102244415301, guid: 07bc0011deabb2e4f9bd0120432cafd5, type: 3}
 --- !u!143 &3530026027045288657
 CharacterController:

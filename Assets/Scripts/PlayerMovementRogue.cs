@@ -95,7 +95,7 @@ public class PlayerMovementRogue : MonoBehaviour
     {
         Vector3 jumping = Vector3.up;
         jumping.y = jumpForce;
-        characterController.Move(jumping* Time.deltaTime);
+        characterController.Move(jumping);
     }
     bool IsOnGround()
     {

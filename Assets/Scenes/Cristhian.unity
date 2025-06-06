@@ -15691,10 +15691,6 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 961739753}
-    - target: {fileID: 503199366837570101, guid: f575427be3d386f44acc1e00e3954ffa, type: 3}
-      propertyPath: jumpForce
-      value: 150
-      objectReference: {fileID: 0}
     - target: {fileID: 665367908466506475, guid: f575427be3d386f44acc1e00e3954ffa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 25.1
@@ -15743,30 +15739,14 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 961739753}
-    - target: {fileID: 4060257740174302862, guid: f575427be3d386f44acc1e00e3954ffa, type: 3}
-      propertyPath: jumpForce
-      value: 150
-      objectReference: {fileID: 0}
     - target: {fileID: 5546189083606805676, guid: f575427be3d386f44acc1e00e3954ffa, type: 3}
       propertyPath: camera
       value: 
       objectReference: {fileID: 961739753}
-    - target: {fileID: 5546189083606805676, guid: f575427be3d386f44acc1e00e3954ffa, type: 3}
-      propertyPath: jumpForce
-      value: 150
-      objectReference: {fileID: 0}
     - target: {fileID: 7560275545428973294, guid: f575427be3d386f44acc1e00e3954ffa, type: 3}
       propertyPath: camera
       value: 
       objectReference: {fileID: 961739753}
-    - target: {fileID: 7560275545428973294, guid: f575427be3d386f44acc1e00e3954ffa, type: 3}
-      propertyPath: jumpForce
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 7560275545428973294, guid: f575427be3d386f44acc1e00e3954ffa, type: 3}
-      propertyPath: rayDistance
-      value: 5.1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
