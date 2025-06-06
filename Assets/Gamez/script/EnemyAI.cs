@@ -12,6 +12,7 @@ public class EnemyAI : MonoBehaviour
     private bool estaMuerto = false;
     private bool jugadorDetectado = false;
     private bool enPreparacion = false;
+    
 
     void Start()
     {
