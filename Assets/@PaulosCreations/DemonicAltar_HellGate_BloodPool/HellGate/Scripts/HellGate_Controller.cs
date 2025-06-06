@@ -4,7 +4,7 @@ using UnityEngine;
 public class HellGate_Controller : MonoBehaviour
 {
     [SerializeField]
-    private Gradient emissionColor;
+    public Gradient emissionColor;
     [SerializeField]
     private ParticleSystem orbParticlesL, orbParticlesR, fireParticles;
     [SerializeField]
@@ -27,12 +27,14 @@ public class HellGate_Controller : MonoBehaviour
 
         gateMaterial = gateRenderer.material;
 
-        gateEffectObj.SetActive(false);
-        gateLight.gameObject.SetActive(false);
+        gateEffectObj.SetActive(true);
+        gateLight.gameObject.SetActive(true);
 
         gateEffectMaterial.SetFloat("_Alpha", 0);
         gateMaterial.SetColor("_EmissionColor", emissionColor.Evaluate(0));
         gateLight.intensity = 0;
+        StartCoroutine(PreActivateGate());
+        
     }
 
     public void ToggleHellGate()

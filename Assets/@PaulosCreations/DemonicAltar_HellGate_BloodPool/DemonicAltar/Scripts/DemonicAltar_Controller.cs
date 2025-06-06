@@ -4,15 +4,15 @@ using PaulosDemonicAltar;
 
 public class DemonicAltar_Controller : MonoBehaviour
 {
-    [SerializeField] private EnabledState lightningEffects;
+    [SerializeField] public EnabledState lightningEffects;
     [Space(10)]
 
-    [SerializeField] private Gradient emissionColor;
-    [SerializeField] private Renderer altarRend;
-    [SerializeField] private GameObject runeCircleParticlesObj, runeExplosionObj;
-    [SerializeField] private ParticleSystem portalParticles, lightningParticles, sparksParticles;
-    [SerializeField] private Light portalLight, lightningLight;
-    [SerializeField] private AudioSource chantingAudio, portalAudio, lightningAudio;
+    [SerializeField] public Gradient emissionColor;
+    [SerializeField] public Renderer altarRend;
+    [SerializeField] public GameObject runeCircleParticlesObj, runeExplosionObj;
+    [SerializeField] public ParticleSystem portalParticles, lightningParticles, sparksParticles;
+    [SerializeField] public Light portalLight, lightningLight;
+    [SerializeField] public AudioSource chantingAudio, portalAudio, lightningAudio;
 
     private Vector3 runeCircleStartPosition = new Vector3(0.18f, 1.2f, 0), runeCircleEndPosition = new Vector3(0.18f, 6.5f, 0);
     private bool inTransition, altarOn;
@@ -25,9 +25,9 @@ public class DemonicAltar_Controller : MonoBehaviour
     private void Start()
     {
         runeCircleTF = runeCircleParticlesObj.transform;
-        runeCircleTF.gameObject.SetActive(false);
+        runeCircleTF.gameObject.SetActive(true);
 
-        runeExplosionObj.SetActive(false);
+        runeExplosionObj.SetActive(true);
 
         altarMat = altarRend.material;
         altarMat.SetColor("_EmissionColor", emissionColor.Evaluate(0));
