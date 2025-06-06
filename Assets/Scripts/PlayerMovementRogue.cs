@@ -11,8 +11,8 @@ public class PlayerMovementRogue : MonoBehaviour
     public float rayDistance;
     private Vector2 inputs;
     [SerializeField] private float moveSpeed = 20;
-    [SerializeField]private float gravity = -0.9f;
-    [SerializeField]private float fallVelocity;
+    [SerializeField] private float gravity = -0.9f;
+    [SerializeField] private float fallVelocity;
     Vector3 gravityJump;
     public float jumpForce;
     bool rogueAtack;
@@ -45,13 +45,12 @@ public class PlayerMovementRogue : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F) && rogueAtack == false)
         {
             animator.SetBool("Atack", true);
-            
+
         }
     }
     void FixedUpdate()
     {
         Movement();
-        animator.SetBool("Jump", false);
         animator.SetBool("Atack", false);
 
     }
@@ -80,6 +79,7 @@ public class PlayerMovementRogue : MonoBehaviour
         {
             fallVelocity = gravity * Time.deltaTime;
             movement.y = fallVelocity;
+            animator.SetBool("Jump", false);
         }
         if (!IsOnGround())
         {
@@ -121,6 +121,10 @@ public class PlayerMovementRogue : MonoBehaviour
     void InstantiateRogue()
     {
         Instantiate(roguePrefab, armRogue.transform.position, armRogue.transform.rotation);
-        
+
+    }
+    void JumpFalse()
+    {
+        animator.SetBool("Jump", false);
     }
 }

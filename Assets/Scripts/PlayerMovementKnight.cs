@@ -11,8 +11,8 @@ public class PlayerMovementKnight : MonoBehaviour
     public float rayDistance;
     private Vector2 inputs;
     [SerializeField] private float moveSpeed = 20;
-    [SerializeField]private float gravity = -0.9f;
-    [SerializeField]private float fallVelocity;
+    [SerializeField] private float gravity = -0.9f;
+    [SerializeField] private float fallVelocity;
     Vector3 gravityJump;
     public float jumpForce;
     private Collider SwordCollider;
@@ -46,10 +46,10 @@ public class PlayerMovementKnight : MonoBehaviour
     void FixedUpdate()
     {
         Movement();
-        animator.SetBool("Jump", false);
+
         animator.SetBool("Atack", false);
-        
-        
+
+
     }
 
     public void Movement()
@@ -72,18 +72,19 @@ public class PlayerMovementKnight : MonoBehaviour
             movement = direction * moveSpeed * movementSpeed * Time.deltaTime;
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 0.3f);
         }
-        
+
         if (IsOnGround())
         {
             fallVelocity = gravity * Time.deltaTime;
             movement.y = fallVelocity;
+            animator.SetBool("Jump", false);
         }
         if (!IsOnGround())
         {
             fallVelocity -= -gravity * Time.deltaTime;
             movement.y = fallVelocity;
         }
-        
+
         characterController.Move(movement);
         animator.SetFloat("Speed", movementSpeed);
 
@@ -94,8 +95,8 @@ public class PlayerMovementKnight : MonoBehaviour
         Vector3 jumping = Vector3.up;
         jumping.y = jumpForce;
         characterController.Move(jumping);
-        
-        
+
+
     }
     bool IsOnGround()
     {
@@ -107,7 +108,7 @@ public class PlayerMovementKnight : MonoBehaviour
     {
         Debug.DrawRay(transform.position, Vector3.down * rayDistance, Color.red);
     }
-    
+
     void GoAtack()
     {
         moveSpeed = 0;
@@ -123,6 +124,10 @@ public class PlayerMovementKnight : MonoBehaviour
         moveSpeed = 20;
         animator.SetBool("Atack", false);
         SwordCollider.GetComponent<Collider>().enabled = false;
+    }
+    void JumpFalse()
+    {
+        animator.SetBool("Jump", false);
     }
     
 }
