@@ -11,8 +11,8 @@ public class PlayerMovementMage : MonoBehaviour
     public float rayDistance;
     private Vector2 inputs;
     [SerializeField] private float moveSpeed = 20;
-    [SerializeField]private float gravity = -0.9f;
-    [SerializeField]private float fallVelocity;
+    [SerializeField] private float gravity = -0.9f;
+    [SerializeField] private float fallVelocity;
     Vector3 gravityJump;
     public float jumpForce;
     bool mageAtack;
@@ -46,12 +46,11 @@ public class PlayerMovementMage : MonoBehaviour
         {
             animator.SetBool("Atack", true);
         }
-        
+
     }
     void FixedUpdate()
     {
         Movement();
-        animator.SetBool("Jump", false);
         animator.SetBool("Atack", false);
 
     }
@@ -81,6 +80,7 @@ public class PlayerMovementMage : MonoBehaviour
         {
             fallVelocity = gravity * Time.deltaTime;
             movement.y = fallVelocity;
+            animator.SetBool("Jump", false);
         }
         if (!IsOnGround())
         {
@@ -122,7 +122,11 @@ public class PlayerMovementMage : MonoBehaviour
     void InstantiateBall()
     {
         Instantiate(magePrefab, baculeMage.transform.position, transform.rotation);
-        
-        
+
+
+    }
+    void JumpFalse()
+    {
+        animator.SetBool("Jump", false);
     }
 }

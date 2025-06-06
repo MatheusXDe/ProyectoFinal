@@ -11,8 +11,8 @@ public class PlayerMovementBarbarian : MonoBehaviour
     public float rayDistance;
     private Vector2 inputs;
     [SerializeField] private float moveSpeed = 20;
-    [SerializeField]private float gravity= -0.9f;
-    [SerializeField]private float fallVelocity;
+    [SerializeField] private float gravity = -0.9f;
+    [SerializeField] private float fallVelocity;
     Vector3 gravityJump;
     public float jumpForce;
     private Collider axeCollider;
@@ -46,7 +46,6 @@ public class PlayerMovementBarbarian : MonoBehaviour
     void FixedUpdate()
     {
         Movement();
-        animator.SetBool("Jump", false);
         animator.SetBool("Atack", false);
 
     }
@@ -76,6 +75,7 @@ public class PlayerMovementBarbarian : MonoBehaviour
         {
             fallVelocity = gravity * Time.deltaTime;
             movement.y = fallVelocity;
+            animator.SetBool("Jump", false);
         }
         if (!IsOnGround())
         {
@@ -118,5 +118,9 @@ public class PlayerMovementBarbarian : MonoBehaviour
         moveSpeed = 20;
         animator.SetBool("Atack", false);
         axeCollider.GetComponent<Collider>().enabled = false;
+    }
+    void JumpFalse()
+    {
+        animator.SetBool("Jump", false);
     }
 }
