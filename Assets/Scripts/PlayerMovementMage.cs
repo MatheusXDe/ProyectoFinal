@@ -11,7 +11,8 @@ public class PlayerMovementMage : MonoBehaviour
     public float rayDistance;
     private Vector2 inputs;
     [SerializeField] private float moveSpeed = 20;
-    private float gravity = -5.0f;
+    [SerializeField]private float gravity = -0.9f;
+    [SerializeField]private float fallVelocity;
     Vector3 gravityJump;
     public float jumpForce;
     bool mageAtack;
@@ -35,7 +36,6 @@ public class PlayerMovementMage : MonoBehaviour
 
     void Update()
     {
-        ApplyGravity();
         inputs = playerInput.actions["Move"].ReadValue<Vector2>();
         if (playerInput.actions["Jump"].WasPressedThisFrame() && IsOnGround())
         {
@@ -76,7 +76,17 @@ public class PlayerMovementMage : MonoBehaviour
             movement = direction * moveSpeed * Time.deltaTime;
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 0.3f);
         }
-        movement.y += gravity * Time.deltaTime;
+
+        if (IsOnGround())
+        {
+            fallVelocity = gravity * Time.deltaTime;
+            movement.y = fallVelocity;
+        }
+        if (!IsOnGround())
+        {
+            fallVelocity -= -gravity * Time.deltaTime;
+            movement.y = fallVelocity;
+        }
         characterController.Move(movement);
         animator.SetFloat("Speed", movementSpeed);
 
@@ -85,8 +95,8 @@ public class PlayerMovementMage : MonoBehaviour
     void Jump()
     {
         Vector3 jumping = Vector3.up;
-        jumping.y = Mathf.Sqrt(jumpForce * -5.0f * gravity * Time.deltaTime);
-        characterController.Move(jumping);
+        jumping.y = jumpForce;
+        characterController.Move(jumping* Time.deltaTime);
     }
     bool IsOnGround()
     {
@@ -97,17 +107,6 @@ public class PlayerMovementMage : MonoBehaviour
     void OnDrawGizmos() // Dibujar el raycast en el editor para depuración visual
     {
         Debug.DrawRay(transform.position, Vector3.down * rayDistance, Color.red);
-    }
-    void ApplyGravity()
-    {
-        // Aplicar gravedad si el jugador no está en el suelo
-        if (IsOnGround() && gravity < 0)
-        {
-            // Mantener al jugador pegado al suelo con una pequeña fuerza hacia abajo
-            gravity = -5.0f;
-        }
-
-
     }
     void GoAtack()
     {
