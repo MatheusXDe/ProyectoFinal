@@ -4,7 +4,7 @@ using System.Collections;
 
 public class EnemyAI : MonoBehaviour
 {
-    public Transform jugador;
+    private Transform jugador;
     private NavMeshAgent agente;
     private EnemyAnimation animacion;
     public float distanciaDeteccion = 10f;
@@ -25,6 +25,7 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
+        jugador = GameObject.FindWithTag("Player").GetComponent<Transform>();
         if (estaMuerto) return;
 
         float distancia = Vector3.Distance(transform.position, jugador.position);
