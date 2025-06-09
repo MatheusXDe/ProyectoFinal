@@ -9,18 +9,18 @@ public class ProjectileMoveMage : MonoBehaviour
    private float lowerBoundZ;
    public float speed = 30.0f;
    void Start()
-    {
-        baculeMage = GameObject.FindGameObjectWithTag("BaculeMage").GetComponent<Transform>();
-    }
+   {
+      baculeMage = GameObject.FindGameObjectWithTag("BaculeMage").GetComponent<Transform>();
+   }
 
    void Update()
    {
       transform.Translate(Vector3.forward * Time.deltaTime * speed);
 
-      topBoundX = baculeMage.transform.position.x + 10.0f;
-      lowerBoundX = baculeMage.transform.position.x + -10.0f;
-      topBoundZ = baculeMage.transform.position.z + 10.0f;
-      lowerBoundZ = baculeMage.transform.position.z + -10.0f;
+      topBoundX = baculeMage.transform.position.x + 20.0f;
+      lowerBoundX = baculeMage.transform.position.x + -20.0f;
+      topBoundZ = baculeMage.transform.position.z + 20.0f;
+      lowerBoundZ = baculeMage.transform.position.z + -20.0f;
 
       if (transform.position.x > topBoundX)
       {
@@ -38,7 +38,18 @@ public class ProjectileMoveMage : MonoBehaviour
       {
          Destroy(gameObject);
       }
-    
+
    }
+   void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            EnemyAI enemy = other.GetComponent<EnemyAI>();
+            if (enemy != null)
+            {
+                enemy.Morir();  // Llamar la función de muerte en el enemigo
+            }
+        }
+    }
     
 }
