@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerInv : MonoBehaviour
 {
     public int money;
-    public List<SO_InvObj> inventory = new();
+    public List<InvObj> inventory = new();
 
     private void Start()
     {
