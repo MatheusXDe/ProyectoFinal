@@ -13,6 +13,7 @@ public class EnemyAIFast : MonoBehaviour
 
     void Start()
     {
+        transform.localScale=new Vector3(4f,4f,4f);
         agente = GetComponent<NavMeshAgent>();
         animacion = GetComponent<EnemyAnimation>();
         animacion.SetCorrer(false);

@@ -3,6 +3,7 @@ using UnityEngine.AI;
 using System.Collections;
 using System.IO.Compression;
 
+
 public class EnemyAI : MonoBehaviour
 {
     private Transform jugador;

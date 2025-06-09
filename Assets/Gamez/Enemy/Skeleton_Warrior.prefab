@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton_Warrior
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1536a2ee553069d4794d679135530970, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -83,6 +87,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1536a2ee553069d4794d679135530970, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7495571944720627008}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1536a2ee553069d4794d679135530970, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -3781465557705235672}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1536a2ee553069d4794d679135530970, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -1321064069337103379}
   m_SourcePrefab: {fileID: 100100000, guid: 1536a2ee553069d4794d679135530970, type: 3}
 --- !u!4 &2014836912229521995 stripped
 Transform:
@@ -128,9 +138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70ff94e804f83724cb1145d5a6c9445a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jugador: {fileID: 0}
-  distanciaDeteccion: 10
-  distanciaAtaque: 2
+  distanciaDeteccion: 50
+  distanciaAtaque: 5
 --- !u!95 &7669670360125214987
 Animator:
   serializedVersion: 7
@@ -165,6 +174,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcc665c2ab033464c9ece2fcb8f87bc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &-3781465557705235672
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2506447605968071755}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &-1321064069337103379
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2506447605968071755}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &5486273293345324690
 PrefabInstance:
   m_ObjectHideFlags: 0
