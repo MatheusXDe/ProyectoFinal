@@ -46,7 +46,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -3100369314251171874, guid: 988f50a4e74252744b5d959ff6b01af7, type: 3}
+  m_Motion: {fileID: 7400000, guid: 9d21fa939f154f147ac659d23465c4ed, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -192,7 +192,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: A. Elfos
+  m_Name: A. D. Ciudad
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Preparacion
@@ -277,7 +277,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 4348485665485846014, guid: 8b5ee12a7f43d764fbdf72f4abeaf59f, type: 3}
+  m_Motion: {fileID: 7400000, guid: 4b1dcfc331de54549a94b650385f751e, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -305,7 +305,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 6221427910989041387, guid: b8cb4a02b6c1ca2429114e7552c77f08, type: 3}
+  m_Motion: {fileID: 7400000, guid: 111c5f2baba40874c84636fdf0cf746e, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -333,7 +333,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 5522812681064789136, guid: 2a6752187ce62ae4abff80af6f6566dd, type: 3}
+  m_Motion: {fileID: 7400000, guid: 57b96fcfb13429847939b2e633026c89, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -361,7 +361,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 6720303635017113406, guid: 2f090e35540b08546a326ae995e2db56, type: 3}
+  m_Motion: {fileID: 7400000, guid: a8d68f882ac2f2f48982204cc9c22f27, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
