@@ -5,5 +5,5 @@ public class InvObj : MonoBehaviour
 {
     public ObjectClasses oc;
     public ObjectStat attack, attackSpeed, endurance;
-    public Image objImage;
+    public Sprite objImage;
 }

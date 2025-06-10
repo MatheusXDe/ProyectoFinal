@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 [Serializable]
@@ -9,25 +11,137 @@ public class RackField
     public bool hasChangedValue;
     public float ogValue, queuedValue;
     public int objFieldLevel;
-    public int ogPrice, queuedPrice;
-    public int priceScaleFactor;
+    public int ogPrice, queuedPrice, corePrice;
+    public string title;
+
+    public TMP_Text t_title, t_coins, t_value;
+    public Button purchase;
+
+    public void InitValues(float ov, int olv)
+    {
+        ogValue = ov;
+        objFieldLevel = olv;
+        queuedValue = ogValue;
+        queuedPrice = ogPrice;
+        corePrice = ogPrice;
+
+        purchase.interactable = hasChangedValue;
+        UpdateUIValues();
+    }
+    public void EnqueueValues(bool add)
+    {
+        if (!add)
+        {
+            queuedValue -= ogValue;
+            queuedPrice -= ogPrice;
+            objFieldLevel--;
+        }
+        else
+        {
+            queuedValue += ogValue;
+            queuedPrice += ogPrice;
+            objFieldLevel++;
+        }
+
+        if ((queuedValue >= ogValue) || (queuedPrice >= ogPrice)) hasChangedValue = true;
+        else hasChangedValue = false;
+
+        purchase.interactable = hasChangedValue;
+
+        UpdateUIValues();
+    }
+    public void ValuesAfterCO()
+    {
+        ogPrice = corePrice;
+        ogValue = queuedValue;
+        hasChangedValue = false;
+        purchase.interactable = hasChangedValue;
+        UpdateUIValues();
+    }
+    public void UpdateUIValues()
+    {
+        t_title.text = title + " Nv." + objFieldLevel;
+        t_coins.text = queuedPrice.ToString();
+        t_value.text = queuedValue.ToString();
+    }
 }
 
 public class WeaponUI : MonoBehaviour
 {
-    public RackField f_attack, f_attSpeed, f_endurance;
+    public RackField[] statFields;
 
+    public PlayerInv player;
     public List<InvObj> playerInventory = new();
-    List<Image> piIcons = new(); 
+    List<Button> invButtons = new();
 
     public InvObj selectedObj;
+    public Image im_selectedObj;
 
+    private void OnEnable()
+    {
+        GetPlayerInventory();
+    }
+
+    private void OnDisable()
+    {
+        UnloadLists();
+    }
     public void GetPlayerInventory()
     {
-        playerInventory = FindAnyObjectByType<PlayerInv>().inventory;
-        foreach (InvObj obj in playerInventory)
+        player = FindAnyObjectByType<PlayerInv>();
+        playerInventory = player.inventory;
+        GameObject wr = GameObject.Find("WeaponRack");
+
+        foreach (Button b in wr.GetComponentsInChildren<Button>())
         {
-            piIcons.Add(obj.objImage);
+            invButtons.Add(b);
         }
+
+        for (int i = 0; i < playerInventory.Count; i++)
+        {
+            invButtons[i].image.sprite = playerInventory[i].objImage;
+        }
+    }
+
+    public void GetCurrentObject(int order)
+    {
+        selectedObj = playerInventory[order];
+        im_selectedObj.sprite = selectedObj.objImage;
+
+        statFields[0].InitValues(selectedObj.attack.statValue, selectedObj.attack.statLevel);
+        statFields[1].InitValues(selectedObj.attackSpeed.statValue, selectedObj.attackSpeed.statLevel);
+        statFields[2].InitValues(selectedObj.endurance.statValue, selectedObj.endurance.statLevel);
+    }
+
+    public void EnqueueStat()
+    {
+        BSButton b = EventSystem.current.currentSelectedGameObject.GetComponent<BSButton>();
+
+        statFields[b.rackPosition].EnqueueValues(b.toAdd);
+    }
+    public void Checkout(int pos)
+    {
+        switch (pos)
+        {
+            case 0:
+                selectedObj.attack.statValue = statFields[pos].queuedValue; selectedObj.attack.statLevel = statFields[pos].objFieldLevel;
+                break;
+            case 1:
+                selectedObj.attackSpeed.statValue = statFields[pos].queuedValue; selectedObj.attackSpeed.statLevel = statFields[pos].objFieldLevel;
+                break;
+            case 2:
+                selectedObj.endurance.statValue = statFields[pos].queuedValue; selectedObj.endurance.statLevel = statFields[pos].objFieldLevel;
+                break;
+            default: 
+                break;
+        }
+        player.UpdateMoneyOnShop(statFields[pos].queuedPrice,false);
+        statFields[pos].ValuesAfterCO();
+    }
+
+    void UnloadLists()
+    {
+        playerInventory.Clear();
+        invButtons.Clear();
     }
 }

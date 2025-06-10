@@ -46,12 +46,6 @@ public class UIManager : MonoBehaviour
         else Destroy(Call.gameObject);
     }
 
-    public void RetrieveBSButton()
-    {
-        BSButton b = EventSystem.current.currentSelectedGameObject.gameObject.GetComponent<BSButton>();
-        b.UpdateMoney();
-    }
-
     public void UIMoneyUpdate(int m)
     {
         money.text = m.ToString();
