@@ -9632,17 +9632,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f754e0b3369c89644b7d59157ecd5dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oc: 2
+  oc: 0
   attack:
-    statValue: 4
+    statValue: 5
     statLevel: 1
   attackSpeed:
-    statValue: 2
+    statValue: 1
     statLevel: 1
   endurance:
-    statValue: 2
+    statValue: 3
     statLevel: 1
-  objImage: {fileID: 0}
+  objImage: {fileID: 21300000, guid: a97947a3b7862b54db3aa2829e68e924, type: 3}
 --- !u!1001 &721464676
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14085,7 +14085,7 @@ MonoBehaviour:
   endurance:
     statValue: 2
     statLevel: 1
-  objImage: {fileID: 0}
+  objImage: {fileID: 21300000, guid: ec2bf45d581bee1439a5f0e8b5d25b79, type: 3}
 --- !u!1001 &1081605258
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18426,17 +18426,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f754e0b3369c89644b7d59157ecd5dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oc: 0
+  oc: 2
   attack:
-    statValue: 5
+    statValue: 3
     statLevel: 1
   attackSpeed:
-    statValue: 1
+    statValue: 2
     statLevel: 1
   endurance:
     statValue: 3
     statLevel: 1
-  objImage: {fileID: 0}
+  objImage: {fileID: 21300000, guid: baac7f19080506b4caf3f406a56541d3, type: 3}
 --- !u!1001 &1468698458
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21683,7 +21683,7 @@ MonoBehaviour:
   endurance:
     statValue: 1
     statLevel: 1
-  objImage: {fileID: 0}
+  objImage: {fileID: 21300000, guid: 31ac45b433168f4489a8f71a9b173b2b, type: 3}
 --- !u!1001 &1751777199
 PrefabInstance:
   m_ObjectHideFlags: 0
