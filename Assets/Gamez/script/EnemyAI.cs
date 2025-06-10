@@ -1,20 +1,24 @@
 using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
+using System.IO.Compression;
+
 
 public class EnemyAI : MonoBehaviour
 {
-    public Transform jugador;
+    private Transform jugador;
     private NavMeshAgent agente;
     private EnemyAnimation animacion;
     public float distanciaDeteccion ;
-    public float distanciaAtaque = 2f;
+    public float distanciaAtaque ;
     private bool estaMuerto = false;
     private bool jugadorDetectado = false;
     private bool enPreparacion = false;
+    
 
     void Start()
     {
+        
         agente = GetComponent<NavMeshAgent>();
         animacion = GetComponent<EnemyAnimation>();
         animacion.SetPreparacion(false);
@@ -24,6 +28,7 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
+        jugador = GameObject.FindWithTag("Player").GetComponent<Transform>();
         if (estaMuerto) return;
 
         float distancia = Vector3.Distance(transform.position, jugador.position);
@@ -53,6 +58,7 @@ public class EnemyAI : MonoBehaviour
                 animacion.SetCorrer(false);
                 animacion.SetAtacar(true);
             }
+            
         }
     }
 

@@ -8,7 +8,7 @@ public class SelectPlayer : MonoBehaviour
     public GameObject Rogue;
     void Start()
     {
-
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
@@ -32,35 +32,35 @@ public class SelectPlayer : MonoBehaviour
         }
 
     }
-    void SelectKnight()
+    public void SelectKnight()
     {
+        Barbarian.gameObject.SetActive(false);
+        Mage.gameObject.SetActive(false);
+        Rogue.gameObject.SetActive(false);
         Knight.gameObject.SetActive(true);
-        Barbarian.gameObject.SetActive(false);
-        Mage.gameObject.SetActive(false);
-        Rogue.gameObject.SetActive(false);
 
     }
-    void SelectBarbarian()
+    public void SelectBarbarian()
     {
         Knight.gameObject.SetActive(false);
+        Mage.gameObject.SetActive(false);
+        Rogue.gameObject.SetActive(false);
         Barbarian.gameObject.SetActive(true);
-        Mage.gameObject.SetActive(false);
-        Rogue.gameObject.SetActive(false);
 
     }
-    void SelectMage()
+    public void SelectMage()
     {
-        Knight.gameObject.SetActive(false);
         Barbarian.gameObject.SetActive(false);
+        Rogue.gameObject.SetActive(false);
+        Knight.gameObject.SetActive(false);
         Mage.gameObject.SetActive(true);
-        Rogue.gameObject.SetActive(false);
 
     }
-    void SelectRogue()
+    public void SelectRogue()
     {
-        Knight.gameObject.SetActive(false);
         Barbarian.gameObject.SetActive(false);
         Mage.gameObject.SetActive(false);
+        Knight.gameObject.SetActive(false);
         Rogue.gameObject.SetActive(true);
 
     }

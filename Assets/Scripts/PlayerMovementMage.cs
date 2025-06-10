@@ -10,8 +10,9 @@ public class PlayerMovementMage : MonoBehaviour
     public LayerMask groundLayer;
     public float rayDistance;
     private Vector2 inputs;
-    [SerializeField] private float moveSpeed = 5;
-    private float gravity = -5.0f;
+    [SerializeField] private float moveSpeed = 20;
+    [SerializeField] private float gravity = -0.9f;
+    [SerializeField] private float fallVelocity;
     Vector3 gravityJump;
     public float jumpForce;
     bool mageAtack;
@@ -35,7 +36,6 @@ public class PlayerMovementMage : MonoBehaviour
 
     void Update()
     {
-        ApplyGravity();
         inputs = playerInput.actions["Move"].ReadValue<Vector2>();
         if (playerInput.actions["Jump"].WasPressedThisFrame() && IsOnGround())
         {
@@ -46,12 +46,11 @@ public class PlayerMovementMage : MonoBehaviour
         {
             animator.SetBool("Atack", true);
         }
-        
+
     }
     void FixedUpdate()
     {
         Movement();
-        animator.SetBool("Jump", false);
         animator.SetBool("Atack", false);
 
     }
@@ -76,7 +75,18 @@ public class PlayerMovementMage : MonoBehaviour
             movement = direction * moveSpeed * Time.deltaTime;
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 0.3f);
         }
-        movement.y += gravity * Time.deltaTime;
+
+        if (IsOnGround())
+        {
+            fallVelocity = gravity * Time.deltaTime;
+            movement.y = fallVelocity;
+            animator.SetBool("Jump", false);
+        }
+        if (!IsOnGround())
+        {
+            fallVelocity -= -gravity * Time.deltaTime;
+            movement.y = fallVelocity;
+        }
         characterController.Move(movement);
         animator.SetFloat("Speed", movementSpeed);
 
@@ -85,7 +95,7 @@ public class PlayerMovementMage : MonoBehaviour
     void Jump()
     {
         Vector3 jumping = Vector3.up;
-        jumping.y = Mathf.Sqrt(jumpForce * -5.0f * gravity * Time.deltaTime);
+        jumping.y = jumpForce;
         characterController.Move(jumping);
     }
     bool IsOnGround()
@@ -98,17 +108,6 @@ public class PlayerMovementMage : MonoBehaviour
     {
         Debug.DrawRay(transform.position, Vector3.down * rayDistance, Color.red);
     }
-    void ApplyGravity()
-    {
-        // Aplicar gravedad si el jugador no está en el suelo
-        if (IsOnGround() && gravity < 0)
-        {
-            // Mantener al jugador pegado al suelo con una pequeña fuerza hacia abajo
-            gravity = -3.0f;
-        }
-
-
-    }
     void GoAtack()
     {
         moveSpeed = 0;
@@ -117,13 +116,17 @@ public class PlayerMovementMage : MonoBehaviour
 
     void EndAtack()
     {
-        moveSpeed = 5;
+        moveSpeed = 20;
         animator.SetBool("Atack", false);
     }
     void InstantiateBall()
     {
         Instantiate(magePrefab, baculeMage.transform.position, transform.rotation);
-        
-        
+
+
+    }
+    void JumpFalse()
+    {
+        animator.SetBool("Jump", false);
     }
 }

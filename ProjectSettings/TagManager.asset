@@ -8,6 +8,7 @@ TagManager:
   - AxeBarbarian
   - BaculeMage
   - ArmRogue
+  - Enemy
   layers:
   - Default
   - TransparentFX
