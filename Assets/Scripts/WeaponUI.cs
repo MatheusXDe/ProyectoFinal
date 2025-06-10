@@ -14,7 +14,7 @@ public class RackField
     public int ogPrice, queuedPrice, corePrice;
     public string title;
 
-    public TMP_Text t_title, t_coins, t_value;
+    public TMP_Text t_title, t_coins, t_value, t_level;
     public Button purchase;
 
     public void InitValues(float ov, int olv)
@@ -60,9 +60,10 @@ public class RackField
     }
     public void UpdateUIValues()
     {
-        t_title.text = title + " Nv." + objFieldLevel;
+        t_title.text = title;
         t_coins.text = queuedPrice.ToString();
         t_value.text = queuedValue.ToString();
+        t_level.text = "Nv. "+objFieldLevel;
     }
 }
 
@@ -90,7 +91,7 @@ public class WeaponUI : MonoBehaviour
     {
         player = FindAnyObjectByType<PlayerInv>();
         playerInventory = player.inventory;
-        GameObject wr = GameObject.Find("WeaponRack");
+        GameObject wr = GameObject.Find("Inventario Panel");
 
         foreach (Button b in wr.GetComponentsInChildren<Button>())
         {
@@ -132,10 +133,10 @@ public class WeaponUI : MonoBehaviour
             case 2:
                 selectedObj.endurance.statValue = statFields[pos].queuedValue; selectedObj.endurance.statLevel = statFields[pos].objFieldLevel;
                 break;
-            default: 
+            default:
                 break;
         }
-        player.UpdateMoneyOnShop(statFields[pos].queuedPrice,false);
+        player.UpdateMoneyOnShop(statFields[pos].queuedPrice, false);
         statFields[pos].ValuesAfterCO();
     }
 

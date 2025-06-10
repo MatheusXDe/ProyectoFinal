@@ -200,7 +200,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2198825}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 609651059}
+        m_TargetAssemblyTypeName: WeaponUI, Assembly-CSharp
+        m_MethodName: GetCurrentObject
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2198825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,8 +233,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 000a1ca6b1e3b8345bfe2702901f017c, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: b6f897b5c03312b498ef796646a00d58, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -410,7 +422,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 708.3887, y: -30.539001}
+  m_AnchoredPosition: {x: 708.3887, y: -30.53894}
   m_SizeDelta: {x: 431.0216, y: -649.618}
   m_Pivot: {x: 0.5, y: 0.54701096}
 --- !u!114 &18696899
@@ -433,7 +445,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2e72c96b459300748a64736d08e6dedf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b6f897b5c03312b498ef796646a00d58, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -470,7 +482,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -490,7 +502,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 18696899}
   m_OnClick:
     m_PersistentCalls:
@@ -1081,7 +1093,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &88178234
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1100,7 +1112,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -163.812, y: -22}
+  m_AnchoredPosition: {x: -163.81201, y: -22}
   m_SizeDelta: {x: 290, y: 110}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &88178235
@@ -1299,7 +1311,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 125606691}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 47763067}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &125606691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1540,7 +1564,55 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 156906091}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 871470136}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: GoToScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Interfaz
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 276889457}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 289635163}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 522652506}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &156906091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1660,7 +1732,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 158130531}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 609651059}
+        m_TargetAssemblyTypeName: WeaponUI, Assembly-CSharp
+        m_MethodName: GetCurrentObject
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &158130531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1681,7 +1765,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2e72c96b459300748a64736d08e6dedf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b6f897b5c03312b498ef796646a00d58, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1780,7 +1864,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 162178547}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1328133278}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &162178547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1831,6 +1927,7 @@ GameObject:
   - component: {fileID: 163024082}
   - component: {fileID: 163024081}
   - component: {fileID: 163024080}
+  - component: {fileID: 163024083}
   m_Layer: 5
   m_Name: PrevButton
   m_TagString: Untagged
@@ -1900,7 +1997,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 163024081}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 609651059}
+        m_TargetAssemblyTypeName: WeaponUI, Assembly-CSharp
+        m_MethodName: EnqueueStat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &163024081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1939,6 +2048,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 163024078}
   m_CullTransparentMesh: 1
+--- !u!114 &163024083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163024078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef3673a16fa5174fae364909e747fc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rackPosition: 2
+  toAdd: 0
 --- !u!1 &197576907
 GameObject:
   m_ObjectHideFlags: 0
@@ -2516,7 +2639,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 1.22, y: 0}
+  m_AnchoredPosition: {x: 1.2200012, y: 0}
   m_SizeDelta: {x: -7.56, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &273279947
@@ -2766,7 +2889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3131,7 +3254,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 342138221}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 871470136}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: GoToScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Presetacion
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 522652506}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &342138221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3251,7 +3398,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 345504337}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 609651059}
+        m_TargetAssemblyTypeName: WeaponUI, Assembly-CSharp
+        m_MethodName: GetCurrentObject
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &345504337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3272,8 +3431,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fcc31aabe13563e4893c3dd19ee42337, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: b6f897b5c03312b498ef796646a00d58, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3484,7 +3643,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 359495798}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 609651059}
+        m_TargetAssemblyTypeName: WeaponUI, Assembly-CSharp
+        m_MethodName: Checkout
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &359495798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3560,7 +3731,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0008544922, y: 68.178}
+  m_AnchoredPosition: {x: -0.0008544922, y: 68.17801}
   m_SizeDelta: {x: -335.77, y: -376.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &375772785
@@ -4571,7 +4742,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 431376035}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 609651059}
+        m_TargetAssemblyTypeName: WeaponUI, Assembly-CSharp
+        m_MethodName: GetCurrentObject
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &431376035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4592,8 +4775,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e824fb09793a74c44bee90a78adb1679, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: b6f897b5c03312b498ef796646a00d58, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -5489,7 +5672,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 562551920}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 107094637}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &562551920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5659,9 +5854,11 @@ GameObject:
   - component: {fileID: 609651056}
   - component: {fileID: 609651058}
   - component: {fileID: 609651057}
+  - component: {fileID: 609651059}
+  - component: {fileID: 609651060}
   m_Layer: 5
-  m_Name: LevelUpPanel
-  m_TagString: Untagged
+  m_Name: BlacksmithPanel
+  m_TagString: Blacksmith
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5731,6 +5928,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 609651055}
   m_CullTransparentMesh: 1
+--- !u!114 &609651059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609651055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbb21ba3c2e21644942f4371fdf3c56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statFields:
+  - hasChangedValue: 0
+    ogValue: 0
+    queuedValue: 0
+    objFieldLevel: 0
+    ogPrice: 7
+    queuedPrice: 0
+    corePrice: 0
+    title: Poder de Ataque
+    t_title: {fileID: 1872697031}
+    t_coins: {fileID: 895223612}
+    t_value: {fileID: 12577384}
+    t_level: {fileID: 197576909}
+    purchase: {fileID: 1853498680}
+  - hasChangedValue: 0
+    ogValue: 0
+    queuedValue: 0
+    objFieldLevel: 0
+    ogPrice: 5
+    queuedPrice: 0
+    corePrice: 0
+    title: Velocidad de Ataque
+    t_title: {fileID: 423655101}
+    t_coins: {fileID: 1847947779}
+    t_value: {fileID: 521120960}
+    t_level: {fileID: 1357197284}
+    purchase: {fileID: 359495797}
+  - hasChangedValue: 0
+    ogValue: 0
+    queuedValue: 0
+    objFieldLevel: 0
+    ogPrice: 6
+    queuedPrice: 0
+    corePrice: 0
+    title: Durabilidad
+    t_title: {fileID: 1402685892}
+    t_coins: {fileID: 612405933}
+    t_value: {fileID: 2138280962}
+    t_level: {fileID: 616344172}
+    purchase: {fileID: 1849080176}
+  player: {fileID: 0}
+  playerInventory: []
+  selectedObj: {fileID: 0}
+  im_selectedObj: {fileID: 18696899}
+--- !u!114 &609651060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609651055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e02ef9cba6b5746bb712def4fec5e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: bs
 --- !u!1 &612405931
 GameObject:
   m_ObjectHideFlags: 0
@@ -6750,7 +7016,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 657718626}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 871470136}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: GoToScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Presetacion
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 889310022}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &657718626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6950,7 +7240,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 685272779}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 871470136}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: QuitApp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &685272779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7070,7 +7372,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 700368227}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 871470136}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: QuitApp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &700368227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7373,7 +7687,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 751116218}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1328133278}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &751116218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7770,7 +8096,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 522922460}
   m_HandleRect: {fileID: 522922459}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -8284,7 +8610,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 847738989}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 609651059}
+        m_TargetAssemblyTypeName: WeaponUI, Assembly-CSharp
+        m_MethodName: GetCurrentObject
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &847738989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8455,6 +8793,7 @@ GameObject:
   - component: {fileID: 871470134}
   - component: {fileID: 871470133}
   - component: {fileID: 871470132}
+  - component: {fileID: 871470136}
   m_Layer: 5
   m_Name: UI Game
   m_TagString: Untagged
@@ -8511,9 +8850,9 @@ Canvas:
   m_GameObject: {fileID: 871470131}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_RenderMode: 1
+  m_Camera: {fileID: 2051900808}
+  m_PlaneDistance: 1
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -8538,8 +8877,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 672670049}
-  - {fileID: 289635164}
   - {fileID: 609651056}
+  - {fileID: 289635164}
   - {fileID: 522652507}
   - {fileID: 889310023}
   - {fileID: 428196009}
@@ -8550,6 +8889,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &871470136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871470131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 130ac9ee180a67443a93a1d5d7a4d624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bsmith: {fileID: 0}
+  money: {fileID: 1598026088}
 --- !u!1 &887192040
 GameObject:
   m_ObjectHideFlags: 0
@@ -9391,7 +9744,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 935821453}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1328133278}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &935821453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9586,7 +9951,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 943237004}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 871470136}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: QuitApp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &943237004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9658,11 +10035,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 609651056}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 73.1886, y: -15.187988}
-  m_SizeDelta: {x: 141.7695, y: 141.77}
-  m_Pivot: {x: 0, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 106, y: 22}
+  m_SizeDelta: {x: 141.7695, y: 141.77002}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &950568954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9781,7 +10158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.0000085831, y: -15}
+  m_AnchoredPosition: {x: 662, y: -19.314941}
   m_SizeDelta: {x: 280.904, y: 90.685}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &959655642
@@ -9904,7 +10281,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 963746520}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 871470136}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: GoToScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Interfaz
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 276889457}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 289635163}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &963746520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10101,7 +10514,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 979525983}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 47763067}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &979525983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10970,7 +11395,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1091401446}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 107094637}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1091401446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11574,6 +12011,7 @@ GameObject:
   - component: {fileID: 1283176398}
   - component: {fileID: 1283176397}
   - component: {fileID: 1283176396}
+  - component: {fileID: 1283176399}
   m_Layer: 5
   m_Name: NextButton
   m_TagString: Untagged
@@ -11643,7 +12081,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1283176397}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 609651059}
+        m_TargetAssemblyTypeName: WeaponUI, Assembly-CSharp
+        m_MethodName: EnqueueStat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1283176397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11682,6 +12132,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1283176394}
   m_CullTransparentMesh: 1
+--- !u!114 &1283176399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283176394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef3673a16fa5174fae364909e747fc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rackPosition: 0
+  toAdd: 1
 --- !u!1 &1289637079
 GameObject:
   m_ObjectHideFlags: 0
@@ -13364,6 +13828,7 @@ GameObject:
   - component: {fileID: 1394935537}
   - component: {fileID: 1394935536}
   - component: {fileID: 1394935535}
+  - component: {fileID: 1394935538}
   m_Layer: 5
   m_Name: PrevButton
   m_TagString: Untagged
@@ -13433,7 +13898,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1394935536}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 609651059}
+        m_TargetAssemblyTypeName: WeaponUI, Assembly-CSharp
+        m_MethodName: EnqueueStat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1394935536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13472,6 +13949,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1394935533}
   m_CullTransparentMesh: 1
+--- !u!114 &1394935538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394935533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef3673a16fa5174fae364909e747fc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rackPosition: 0
+  toAdd: 0
 --- !u!1 &1402685890
 GameObject:
   m_ObjectHideFlags: 0
@@ -13647,7 +14138,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0008544922, y: 68.178}
+  m_AnchoredPosition: {x: -0.0008544922, y: 68.17801}
   m_SizeDelta: {x: -335.77, y: -376.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1407671028
@@ -14092,6 +14583,7 @@ GameObject:
   - component: {fileID: 1492598689}
   - component: {fileID: 1492598688}
   - component: {fileID: 1492598687}
+  - component: {fileID: 1492598690}
   m_Layer: 5
   m_Name: NextButton
   m_TagString: Untagged
@@ -14161,7 +14653,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1492598688}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 609651059}
+        m_TargetAssemblyTypeName: WeaponUI, Assembly-CSharp
+        m_MethodName: EnqueueStat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1492598688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14200,6 +14704,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1492598685}
   m_CullTransparentMesh: 1
+--- !u!114 &1492598690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492598685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef3673a16fa5174fae364909e747fc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rackPosition: 1
+  toAdd: 1
 --- !u!1 &1512940590
 GameObject:
   m_ObjectHideFlags: 0
@@ -14282,7 +14800,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1512940593}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1328133278}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1512940593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15427,7 +15957,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0008544922, y: 68.178}
+  m_AnchoredPosition: {x: -0.0008544922, y: 68.17801}
   m_SizeDelta: {x: -335.77, y: -376.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1677674473
@@ -15775,7 +16305,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1720145984}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 871470136}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: QuitApp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1720145984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16062,7 +16604,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0008544922, y: 68.178}
+  m_AnchoredPosition: {x: -0.0008544922, y: 68.17801}
   m_SizeDelta: {x: -335.77, y: -376.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1771154518
@@ -16491,6 +17033,7 @@ GameObject:
   - component: {fileID: 1829965585}
   - component: {fileID: 1829965584}
   - component: {fileID: 1829965583}
+  - component: {fileID: 1829965586}
   m_Layer: 5
   m_Name: PrevButton
   m_TagString: Untagged
@@ -16560,7 +17103,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1829965584}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 609651059}
+        m_TargetAssemblyTypeName: WeaponUI, Assembly-CSharp
+        m_MethodName: EnqueueStat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1829965584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16599,6 +17154,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1829965581}
   m_CullTransparentMesh: 1
+--- !u!114 &1829965586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829965581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef3673a16fa5174fae364909e747fc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rackPosition: 1
+  toAdd: 0
 --- !u!1 &1843348118
 GameObject:
   m_ObjectHideFlags: 0
@@ -16681,7 +17250,67 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1843348121}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 276889457}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1158544883}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 672670050}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 289635163}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 871470136}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: GoToScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Presetacion
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1843348121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16938,7 +17567,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1849080177}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 609651059}
+        m_TargetAssemblyTypeName: WeaponUI, Assembly-CSharp
+        m_MethodName: Checkout
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1849080177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17059,7 +17700,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1853498681}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 609651059}
+        m_TargetAssemblyTypeName: WeaponUI, Assembly-CSharp
+        m_MethodName: Checkout
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1853498681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17466,7 +18119,55 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1893794590}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 871470136}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: GoToScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Interfaz
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 276889457}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 289635163}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 889310022}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1893794590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17661,7 +18362,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1912751274}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1328133278}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1912751274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17848,6 +18561,7 @@ GameObject:
   - component: {fileID: 1914489485}
   - component: {fileID: 1914489484}
   - component: {fileID: 1914489483}
+  - component: {fileID: 1914489486}
   m_Layer: 5
   m_Name: NextButton
   m_TagString: Untagged
@@ -17917,7 +18631,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1914489484}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 609651059}
+        m_TargetAssemblyTypeName: WeaponUI, Assembly-CSharp
+        m_MethodName: EnqueueStat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1914489484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17956,6 +18682,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914489481}
   m_CullTransparentMesh: 1
+--- !u!114 &1914489486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914489481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef3673a16fa5174fae364909e747fc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rackPosition: 2
+  toAdd: 1
 --- !u!1 &1933270043
 GameObject:
   m_ObjectHideFlags: 0
@@ -18798,7 +19538,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 92.634995, y: -24.9585}
+  m_AnchoredPosition: {x: 92.634995, y: -24.958496}
   m_SizeDelta: {x: 185.26999, y: 49.917}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2077261603
