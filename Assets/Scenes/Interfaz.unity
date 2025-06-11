@@ -8882,6 +8882,7 @@ RectTransform:
   - {fileID: 522652507}
   - {fileID: 889310023}
   - {fileID: 428196009}
+  - {fileID: 1027294531}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -10748,12 +10749,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1027294528}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -935.30743, z: 8417.767}
+  m_LocalScale: {x: 935.30743, y: 935.30743, z: 935.30743}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 871470135}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1039715600
 GameObject:
@@ -17308,7 +17309,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Presetacion
+          m_StringArgument: Cristhian
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1843348121
@@ -20141,4 +20142,3 @@ SceneRoots:
   - {fileID: 2051900809}
   - {fileID: 1148010994}
   - {fileID: 871470135}
-  - {fileID: 1027294531}
