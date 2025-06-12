@@ -11,6 +11,8 @@ public class PlayerInv : MonoBehaviour
     private void Start()
     {
         UIManager.Call.UIMoneyUpdate(money);
+        inventory.Clear();
+        GetInventory();
     }
     public void UpdateMoneyOnShop(int newCoins, bool toAdd)
     {
@@ -22,5 +24,13 @@ public class PlayerInv : MonoBehaviour
     {
         money += newCoins;
         UIManager.Call.UIMoneyUpdate(money);
+    }
+
+    void GetInventory()
+    {
+        foreach (InvObj item in GetComponentsInChildren<InvObj>())
+        {
+            inventory.Add(item);
+        }
     }
 }
