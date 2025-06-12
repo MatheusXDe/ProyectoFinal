@@ -12,13 +12,11 @@ public class HealthPlayer : MonoBehaviour
 
     void Start()
     {
-        health = 100f;
-        //textMesh = GetComponent<TextMeshProUGUI>();
+        health = healthMaxime;
         rellenoBarraVida = GameObject.FindGameObjectWithTag("FillHealth").GetComponent<Image>();
     }
     private void Update()
     {
-        //textMesh.text = health.ToString("0");
         rellenoBarraVida.fillAmount = health / healthMaxime;
     }
 
