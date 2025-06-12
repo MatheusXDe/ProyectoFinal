@@ -3,9 +3,10 @@ using UnityEngine.AI;
 using System.Collections;
 using System.IO.Compression;
 
+
 public class EnemyAI : MonoBehaviour
 {
-    public Transform jugador;
+    private Transform jugador;
     private NavMeshAgent agente;
     private EnemyAnimation animacion;
     public float distanciaDeteccion ;
@@ -13,6 +14,7 @@ public class EnemyAI : MonoBehaviour
     private bool estaMuerto = false;
     private bool jugadorDetectado = false;
     private bool enPreparacion = false;
+    
 
     void Start()
     {
@@ -25,7 +27,7 @@ public class EnemyAI : MonoBehaviour
     }
 
     void Update()
-    {   //Pendiente cambiar cuando este la parte de seleccion de personaje:
+    {
         jugador = GameObject.FindWithTag("Player").GetComponent<Transform>();
         if (estaMuerto) return;
 
@@ -56,6 +58,7 @@ public class EnemyAI : MonoBehaviour
                 animacion.SetCorrer(false);
                 animacion.SetAtacar(true);
             }
+            
         }
     }
 
