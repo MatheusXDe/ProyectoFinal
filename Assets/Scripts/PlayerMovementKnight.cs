@@ -119,11 +119,16 @@ public class PlayerMovementKnight : MonoBehaviour
         SwordCollider.GetComponent<Collider>().enabled = true;
 
     }
+    void EndContact()
+    {
+        SwordCollider.GetComponent<Collider>().enabled = false;
+
+    }
     void EndAtack()
     {
         moveSpeed = 20;
         animator.SetBool("Atack", false);
-        SwordCollider.GetComponent<Collider>().enabled = false;
+        
     }
     void JumpFalse()
     {

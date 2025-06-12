@@ -1,12 +1,13 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class HealthEnemy : MonoBehaviour
 {
 
-    public float health;
-    private float healthMaxime = 100;
+    private float health;
+    [SerializeField] float healthMaxime = 100;
     private Image rellenoBarraVida;
     private Camera cam;
     private EnemyAI enemy;
@@ -14,16 +15,16 @@ public class HealthEnemy : MonoBehaviour
     void Start()
     {
         health = healthMaxime;
-        rellenoBarraVida = GameObject.FindGameObjectWithTag("FillEnemy").GetComponent<Image>();
+        rellenoBarraVida = transform.GetChild(1).gameObject.GetComponentInChildren<Image>();
         cam = Camera.main;
-        enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyAI>();
+        enemy = GetComponentInParent<EnemyAI>();
     }
     private void Update()
     {
         rellenoBarraVida.fillAmount = health / healthMaxime;
         transform.rotation = Quaternion.LookRotation(transform.position - cam.transform.position);
 
-        if (health == 0)
+        if (health <= 0)
         {
               enemy.Morir();  // Llamar la función de muerte en el enemigo
             
@@ -32,6 +33,6 @@ public class HealthEnemy : MonoBehaviour
 
     public void HealthEnemyChange(float Number)
     {
-        health += Number;
+        health -= Number;
     }
 }
