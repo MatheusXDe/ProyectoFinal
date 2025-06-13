@@ -8664,8 +8664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: 100
-  inventory:
-  - {fileID: 1079157787}
+  inventory: []
 --- !u!114 &676756672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23525,8 +23524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: 100
-  inventory:
-  - {fileID: 0}
+  inventory: []
 --- !u!114 &1880710730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23562,8 +23560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: 100
-  inventory:
-  - {fileID: 1464776301}
+  inventory: []
 --- !u!114 &1887500957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25847,8 +25844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: 100
-  inventory:
-  - {fileID: 719345343}
+  inventory: []
 --- !u!114 &2030798520
 MonoBehaviour:
   m_ObjectHideFlags: 0
