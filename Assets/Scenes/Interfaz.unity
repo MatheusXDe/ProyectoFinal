@@ -3783,8 +3783,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 85.8, y: 0.000061035156}
-  m_SizeDelta: {x: -171.6, y: 1500}
+  m_AnchoredPosition: {x: 88, y: -0.000061035156}
+  m_SizeDelta: {x: -212, y: 1678}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &357119351
 MonoBehaviour:
@@ -6102,7 +6102,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 809218644}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: -19.936}
-  m_AnchorMin: {x: 0, y: 0.63126}
+  m_AnchorMin: {x: 0, y: 0.65695715}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -7.700001, y: 26}
   m_SizeDelta: {x: 35, y: -183.7}
@@ -8418,8 +8418,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.2, y: 18.849007}
-  m_SizeDelta: {x: 1514.5, y: 876.2}
+  m_AnchoredPosition: {x: 7.7, y: 18.849007}
+  m_SizeDelta: {x: 1500.1, y: 876.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &728733808
 MonoBehaviour:
@@ -9016,8 +9016,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 658.7, y: -1303.6803}
-  m_SizeDelta: {x: 1317.4, y: 2145.0396}
+  m_AnchoredPosition: {x: 631.3, y: -1399.1918}
+  m_SizeDelta: {x: 1262.6, y: 2310.0164}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &775709324
 MonoBehaviour:
@@ -9049,8 +9049,8 @@ MonoBehaviour:
     - Character Pack : Skeletons, https://kaylousberg.itch.io/kaykit-skeletons\n\nDragon
     for Boss Monster, https://assetstore.unity.com/packages/3d/characters/creatures/dragon-for-boss-monster-hp-79398\n\nMini
     Legion Rock Golem PBR HP Polyart, https://assetstore.unity.com/packages/3d/characters/humanoids/fantasy/mini-legion-rock-golem-pbr-hp-polyart-94707\n\n\nMUSICA
-    Y VFX \n\nhttps://pixabay.com/es/sound-effects/\n\nhttps://mixkit.co/free-sound-effects/typewriter/\n\n\nGRACIAS
-    POR JUGAR <3 \n "
+    Y VFX \n\nhttps://pixabay.com/es/sound-effects/\n\nhttps://mixkit.co/free-sound-effects/typewriter/\n\n\n\xA1GRACIAS
+    POR JUGAR !\n \n\n\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: daaa0808f90289d4e8e2a2d35b1af96b, type: 2}
   m_sharedMaterial: {fileID: 5762499131357491346, guid: daaa0808f90289d4e8e2a2d35b1af96b, type: 2}
@@ -9423,7 +9423,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 522922459}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.36874002
+  m_Size: 0.34304285
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -16676,8 +16676,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 658.7, y: -115.580246}
-  m_SizeDelta: {x: 1317.4, y: 231.16049}
+  m_AnchoredPosition: {x: 631.3, y: -122.09181}
+  m_SizeDelta: {x: 1262.6, y: 244.18362}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1434562752
 MonoBehaviour:
