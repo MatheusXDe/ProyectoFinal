@@ -422,7 +422,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 708.3887, y: -30.538925}
+  m_AnchoredPosition: {x: 708.3887, y: -30.53894}
   m_SizeDelta: {x: 431.0216, y: -649.618}
   m_Pivot: {x: 0.5, y: 0.54701096}
 --- !u!114 &18696899
@@ -1443,7 +1443,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 151045680}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 871470137}
+        m_TargetAssemblyTypeName: UISelectHero, Assembly-CSharp
+        m_MethodName: ChangeHero
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &151045680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3007,7 +3019,55 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 297810602}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 428196008}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 672670050}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 289635163}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 871470136}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: GoToScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Cristhian
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &297810602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4496,7 +4556,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.1494141, y: -19.539658}
+  m_AnchoredPosition: {x: 1.1494141, y: -19.539673}
   m_SizeDelta: {x: -39.0796, y: -62.0675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &428196010
@@ -5816,7 +5876,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 597499380}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 871470137}
+        m_TargetAssemblyTypeName: UISelectHero, Assembly-CSharp
+        m_MethodName: ChangeHero
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &597499380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8806,6 +8878,7 @@ GameObject:
   - component: {fileID: 871470133}
   - component: {fileID: 871470132}
   - component: {fileID: 871470136}
+  - component: {fileID: 871470137}
   m_Layer: 5
   m_Name: UI Game
   m_TagString: Untagged
@@ -8916,6 +8989,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bsmith: {fileID: 0}
   money: {fileID: 1598026088}
+--- !u!114 &871470137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871470131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86473ba511647db459f89a71e04b7e08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heroIndex: 0
+  heroPanels:
+  - {fileID: 1677674471}
+  - {fileID: 1407671026}
+  - {fileID: 1771154516}
+  - {fileID: 375772783}
 --- !u!1 &887192040
 GameObject:
   m_ObjectHideFlags: 0
@@ -17313,19 +17404,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 672670050}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 289635163}
+      - m_Target: {fileID: 428196008}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -17336,18 +17415,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 871470136}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: GoToScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Cristhian
-          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1843348121
 MonoBehaviour:
@@ -19576,7 +19643,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 92.634995, y: -24.9585}
+  m_AnchoredPosition: {x: 92.634995, y: -24.958496}
   m_SizeDelta: {x: 185.26999, y: 49.917}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2077261603
