@@ -65,6 +65,8 @@ public class PlayerMovementKnight : MonoBehaviour
         else
         {
             velocity.y = 0; // Reiniciar la velocidad vertical cuando esté en el suelo
+            animator.SetBool("Jump", false);
+
         }
         // Aplicar la velocidad al CharacterController
         characterController.Move(velocity * Time.fixedDeltaTime);

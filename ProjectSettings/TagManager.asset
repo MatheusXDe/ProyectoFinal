@@ -13,6 +13,7 @@ TagManager:
   - FillHealth
   - FillEnemy
   - BackGround
+  - Cargando
   layers:
   - Default
   - TransparentFX
