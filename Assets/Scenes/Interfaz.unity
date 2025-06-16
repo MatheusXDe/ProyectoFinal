@@ -3511,7 +3511,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Presetacion
+          m_StringArgument: Cristhian
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 522652506}
@@ -6029,7 +6029,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &522652507
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10285,6 +10285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bsmith: {fileID: 0}
   money: {fileID: 1598026088}
+  ba: []
 --- !u!114 &871470137
 MonoBehaviour:
   m_ObjectHideFlags: 0

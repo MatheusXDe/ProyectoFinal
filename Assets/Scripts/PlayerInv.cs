@@ -8,7 +8,7 @@ public class PlayerInv : MonoBehaviour
     public int money;
     public List<InvObj> inventory = new();
 
-    Animator an;
+    [SerializeField] Animator an;
 
     private void Start()
     {

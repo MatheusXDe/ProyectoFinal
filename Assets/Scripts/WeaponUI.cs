@@ -50,17 +50,6 @@ public class RackField
 
         UpdateUIValues();
     }
-    public void MakeCheckout(int playermoney, float playerWV, int playerWL)
-    {
-        if (playermoney < queuedPrice) Debug.Log("Not enough money");
-        else
-        {
-            playerWV = queuedValue;
-            playerWL = objFieldLevel;
-
-            ValuesAfterCO();
-        }
-    }
     public void ValuesAfterCO()
     {
         ogPrice = corePrice;
@@ -74,7 +63,7 @@ public class RackField
         t_title.text = title;
         t_coins.text = queuedPrice.ToString();
         t_value.text = queuedValue.ToString();
-        t_level.text = "Nv. "+objFieldLevel;
+        t_level.text = "Nv. " + objFieldLevel;
     }
 }
 
@@ -133,22 +122,29 @@ public class WeaponUI : MonoBehaviour
     }
     public void Checkout(int pos)
     {
-        switch (pos)
+        if (player.money < statFields[pos].queuedPrice) Debug.Log("Not enough money!");
+        else
         {
-            case 0:
-                statFields[pos].MakeCheckout(player.money,selectedObj.attack.statValue, selectedObj.attack.statLevel);
-                break;
-            case 1:
-                statFields[pos].MakeCheckout(player.money, selectedObj.attackSpeed.statValue, selectedObj.attackSpeed.statLevel);
-                break;
-            case 2:
-                statFields[pos].MakeCheckout(player.money, selectedObj.endurance.statValue, selectedObj.endurance.statLevel);
-                break;
-            default:
-                break;
+            switch (pos)
+            {
+                case 0:
+                    selectedObj.attack.statValue = statFields[pos].queuedValue;
+                    selectedObj.attack.statLevel = statFields[pos].objFieldLevel;
+                    break;
+                case 1:
+                    selectedObj.attackSpeed.statValue = statFields[pos].queuedValue;
+                    selectedObj.attackSpeed.statLevel = statFields[pos].objFieldLevel;
+                    break;
+                case 2:
+                    selectedObj.endurance.statValue = statFields[pos].queuedValue;
+                    selectedObj.endurance.statLevel = statFields[pos].objFieldLevel;
+                    break;
+                default:
+                    break;
+            }
+            player.UpdateMoneyOnShop(statFields[pos].queuedPrice, false);
+            statFields[pos].ValuesAfterCO();
         }
-        player.UpdateMoneyOnShop(statFields[pos].queuedPrice, false);
-        statFields[pos].ValuesAfterCO();
     }
 
     void UnloadLists()
