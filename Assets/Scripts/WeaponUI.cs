@@ -43,12 +43,23 @@ public class RackField
             objFieldLevel++;
         }
 
-        if ((queuedValue >= ogValue) || (queuedPrice >= ogPrice)) hasChangedValue = true;
+        if (queuedValue > ogValue && queuedPrice > ogPrice) hasChangedValue = true;
         else hasChangedValue = false;
 
         purchase.interactable = hasChangedValue;
 
         UpdateUIValues();
+    }
+    public void MakeCheckout(int playermoney, float playerWV, int playerWL)
+    {
+        if (playermoney < queuedPrice) Debug.Log("Not enough money");
+        else
+        {
+            playerWV = queuedValue;
+            playerWL = objFieldLevel;
+
+            ValuesAfterCO();
+        }
     }
     public void ValuesAfterCO()
     {
@@ -125,13 +136,13 @@ public class WeaponUI : MonoBehaviour
         switch (pos)
         {
             case 0:
-                selectedObj.attack.statValue = statFields[pos].queuedValue; selectedObj.attack.statLevel = statFields[pos].objFieldLevel;
+                statFields[pos].MakeCheckout(player.money,selectedObj.attack.statValue, selectedObj.attack.statLevel);
                 break;
             case 1:
-                selectedObj.attackSpeed.statValue = statFields[pos].queuedValue; selectedObj.attackSpeed.statLevel = statFields[pos].objFieldLevel;
+                statFields[pos].MakeCheckout(player.money, selectedObj.attackSpeed.statValue, selectedObj.attackSpeed.statLevel);
                 break;
             case 2:
-                selectedObj.endurance.statValue = statFields[pos].queuedValue; selectedObj.endurance.statLevel = statFields[pos].objFieldLevel;
+                statFields[pos].MakeCheckout(player.money, selectedObj.endurance.statValue, selectedObj.endurance.statLevel);
                 break;
             default:
                 break;
