@@ -87,11 +87,11 @@ public class PlayerMovementKnight : MonoBehaviour
         }
     }
 
-    public void Movement()
+
+    void Movement()
     {
         Vector3 movement = Vector3.zero;
         float movementSpeed = 0;
-
         if (inputs.x != 0 || inputs.y != 0)
         {
             Vector3 forward = camera.forward;
@@ -101,11 +101,11 @@ public class PlayerMovementKnight : MonoBehaviour
             right.y = 0;
             right.Normalize();
 
-            Vector3 direction = (forward * inputs.y) + (right * inputs.x);
+            Vector3 direction = forward * inputs.y + right * inputs.x;
             movementSpeed = Mathf.Clamp01(direction.magnitude);
             direction.Normalize();
 
-            movement = direction * moveSpeed * movementSpeed * Time.deltaTime;
+            movement = direction * moveSpeed * Time.deltaTime;
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 0.3f);
         }
 

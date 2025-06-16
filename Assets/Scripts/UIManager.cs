@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
     public static UIManager Call;
     [SerializeField] GameObject bsmith;
     [SerializeField] TMP_Text money;
+    [SerializeField] AdressInactive[] ba;
 
     Canvas canvas;
     private void Awake()
@@ -16,8 +17,11 @@ public class UIManager : MonoBehaviour
 
         canvas = GetComponent<Canvas>();
 
-        AdressInactive ba = FindAnyObjectByType<AdressInactive>(FindObjectsInactive.Include);
-        if (!(ba.id == "bs")) return; else bsmith = ba.gameObject;
+        ba = FindObjectsByType<AdressInactive>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        for (int i = 0; i < ba.Length; i++)
+        {
+            if (ba[i].id == "bs") bsmith = ba[i].gameObject;
+        }
     }
 
     public void GoToScene(string targetScene)

@@ -153,7 +153,6 @@ public class WeaponUI : MonoBehaviour
 
     void UnloadLists()
     {
-        playerInventory.Clear();
         invButtons.Clear();
     }
 }

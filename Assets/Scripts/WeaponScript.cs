@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class WeaponScript : MonoBehaviour
 {
-    private Collider weaponCollider;
-
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))
