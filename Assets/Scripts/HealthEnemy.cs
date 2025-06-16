@@ -26,8 +26,7 @@ public class HealthEnemy : MonoBehaviour
 
         if (health <= 0)
         {
-              enemy.Morir();  // Llamar la función de muerte en el enemigo
-            
+            enemy.Morir();  // Llamar la función de muerte en el enemigo
         }
     }
 
