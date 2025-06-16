@@ -506,10 +506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bd390b91efb64e4b9a393fd5038b4f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Knight: {fileID: 3443281439982115145}
-  Barbarian: {fileID: 7636194879476136040}
-  Mage: {fileID: 876787184501508252}
-  Rogue: {fileID: 8953563950755308153}
+  heroes: []
 --- !u!1 &3019423292697961459
 GameObject:
   m_ObjectHideFlags: 0
