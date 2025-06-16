@@ -3,6 +3,8 @@ using UnityEngine;
 public class SelectPlayer : MonoBehaviour
 {
     public GameObject[] heroes;
+    private GameObject cargando;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -16,5 +18,7 @@ public class SelectPlayer : MonoBehaviour
             else hero.SetActive(false);
             i++;
         }
+        cargando = GameObject.FindGameObjectWithTag("Cargando");
+        cargando.SetActive(false);
     }
 }

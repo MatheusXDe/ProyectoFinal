@@ -13,11 +13,16 @@ public class PlayerMovementRogue : MonoBehaviour
     [SerializeField] private float moveSpeed = 20;
     [SerializeField] private float gravity = -0.9f;
     [SerializeField] private float fallVelocity;
-    Vector3 gravityJump;
     public float jumpForce;
     bool rogueAtack;
     public GameObject roguePrefab;
     private Transform armRogue;
+    private Vector3 velocity = Vector3.zero;
+
+    // 🎧 Audio de pasos
+    public AudioSource footstepAudioSource;
+    [SerializeField] private float stepDelay = 0.5f;
+    private float stepTimer;
 
 
 
@@ -53,6 +58,29 @@ public class PlayerMovementRogue : MonoBehaviour
         Movement();
         animator.SetBool("Atack", false);
 
+        if (!IsOnGround())
+        {
+            velocity.y += gravity * Time.fixedDeltaTime;
+        }
+        else
+        {
+            velocity.y = 0; // Reiniciar la velocidad vertical cuando esté en el suelo
+            animator.SetBool("Jump", false);
+        }
+        // Aplicar la velocidad al CharacterController
+        characterController.Move(velocity * Time.fixedDeltaTime);
+        // Reproducción de pasos 
+        if ((inputs.x != 0 || inputs.y != 0) && IsOnGround())
+        {
+            stepTimer += Time.fixedDeltaTime;
+            if (stepTimer >= stepDelay)
+            {
+                footstepAudioSource.Play();
+                stepTimer = 0f;
+            }
+
+        }
+
     }
 
     void Movement()
@@ -75,17 +103,6 @@ public class PlayerMovementRogue : MonoBehaviour
             movement = direction * moveSpeed * Time.deltaTime;
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 0.3f);
         }
-        if (IsOnGround())
-        {
-            fallVelocity = gravity * Time.deltaTime;
-            movement.y = fallVelocity;
-            animator.SetBool("Jump", false);
-        }
-        if (!IsOnGround())
-        {
-            fallVelocity -= -gravity * Time.deltaTime;
-            movement.y = fallVelocity;
-        }
         characterController.Move(movement);
         animator.SetFloat("Speed", movementSpeed);
 
@@ -93,9 +110,12 @@ public class PlayerMovementRogue : MonoBehaviour
     }
     void Jump()
     {
-        Vector3 jumping = Vector3.up;
-        jumping.y = jumpForce;
-        characterController.Move(jumping);
+        if (IsOnGround())
+        {
+        velocity.y = jumpForce;
+        }
+        Vector3 jumpVelocity = Vector3.up * jumpForce;
+        characterController.Move(jumpVelocity * Time.fixedDeltaTime);
     }
     bool IsOnGround()
     {

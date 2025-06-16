@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class ProjectileMoveRogue : MonoBehaviour
 {
+   public float damage;
    private Transform ArmRogue;
    private float topBoundX;
    private float lowerBoundX;
@@ -44,11 +45,9 @@ public class ProjectileMoveRogue : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            EnemyAI enemy = other.GetComponent<EnemyAI>();
-            if (enemy != null)
-            {
-                enemy.Morir();  // Llamar la función de muerte en el enemigo
-            }
+            HealthEnemy health = other.GetComponentInChildren<HealthEnemy>();
+            health.HealthEnemyChange(damage);  //  Llamar la función de salud el enemigo
+            
         }
     }
     

@@ -10,6 +10,10 @@ TagManager:
   - ArmRogue
   - Enemy
   - Blacksmith
+  - FillHealth
+  - FillEnemy
+  - BackGround
+  - Cargando
   layers:
   - Default
   - TransparentFX
@@ -42,7 +46,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - MiniMapa
   m_SortingLayers:
   - name: Default
     uniqueID: 0
