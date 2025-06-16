@@ -68,6 +68,7 @@ public class PlayerMovementBarbarian : MonoBehaviour
         else
         {
             velocity.y = 0;
+            animator.SetBool("Jump", false);
         }
 
         characterController.Move(velocity * Time.fixedDeltaTime);
