@@ -10,14 +10,20 @@ public class PlayerMovementKnight : MonoBehaviour
     public LayerMask groundLayer;
     public float rayDistance;
     private Vector2 inputs;
+
     [SerializeField] private float moveSpeed = 20;
     [SerializeField] private float gravity = -0.9f;
     [SerializeField] private float fallVelocity;
     public float jumpForce;
+
     private Collider SwordCollider;
     bool swordAtack;
     private Vector3 velocity = Vector3.zero;
 
+    
+    public AudioSource footstepAudioSource;
+    [SerializeField] private float stepDelay = 0.5f;
+    private float stepTimer;
 
     void Start()
     {
@@ -27,8 +33,8 @@ public class PlayerMovementKnight : MonoBehaviour
         SwordCollider = GameObject.FindGameObjectWithTag("SwordKnight").GetComponent<Collider>();
         SwordCollider.GetComponent<Collider>().enabled = false;
         swordAtack = animator.GetBool("Atack");
+        stepTimer = stepDelay;
     }
-
 
     void Update()
     {
@@ -38,17 +44,20 @@ public class PlayerMovementKnight : MonoBehaviour
             Jump();
             animator.SetBool("Jump", true);
         }
+
         if (Input.GetKeyDown(KeyCode.F) && swordAtack == false)
         {
             animator.SetBool("Atack", true);
         }
     }
+
     void FixedUpdate()
     {
         Movement();
 
         animator.SetBool("Atack", false);
-        
+
+        // Movimiento vertical
         if (!IsOnGround())
         {
             velocity.y += gravity * Time.fixedDeltaTime;
@@ -60,13 +69,27 @@ public class PlayerMovementKnight : MonoBehaviour
         // Aplicar la velocidad al CharacterController
         characterController.Move(velocity * Time.fixedDeltaTime);
 
-
+        // Reproducción de pasos 
+        if ((inputs.x != 0 || inputs.y != 0) && IsOnGround())
+        {
+            stepTimer += Time.fixedDeltaTime;
+            if (stepTimer >= stepDelay)
+            {
+                footstepAudioSource.Play();
+                stepTimer = 0f;
+            }
+        }
+        else
+        {
+            stepTimer = stepDelay;
+        }
     }
 
     public void Movement()
     {
         Vector3 movement = Vector3.zero;
         float movementSpeed = 0;
+
         if (inputs.x != 0 || inputs.y != 0)
         {
             Vector3 forward = camera.forward;
@@ -86,26 +109,24 @@ public class PlayerMovementKnight : MonoBehaviour
 
         characterController.Move(movement);
         animator.SetFloat("Speed", movementSpeed);
-
-
     }
+
     void Jump()
     {
         if (IsOnGround())
         {
-        velocity.y = jumpForce;
+            velocity.y = jumpForce;
         }
         Vector3 jumpVelocity = Vector3.up * jumpForce;
         characterController.Move(jumpVelocity * Time.fixedDeltaTime);
-
     }
+
     bool IsOnGround()
     {
         return Physics.Raycast(transform.position, Vector3.down, rayDistance, groundLayer);
     }
 
-
-    void OnDrawGizmos() // Dibujar el raycast en el editor para depuración visual
+    void OnDrawGizmos()
     {
         Debug.DrawRay(transform.position, Vector3.down * rayDistance, Color.red);
     }
@@ -113,28 +134,26 @@ public class PlayerMovementKnight : MonoBehaviour
     void GoAtack()
     {
         moveSpeed = 0;
-
     }
+
     void SwordContact()
     {
         SwordCollider.GetComponent<Collider>().enabled = true;
-
     }
+
     void EndContact()
     {
         SwordCollider.GetComponent<Collider>().enabled = false;
-
     }
+
     void EndAtack()
     {
         moveSpeed = 20;
         animator.SetBool("Atack", false);
-        
     }
+
     void JumpFalse()
     {
         animator.SetBool("Jump", false);
     }
-    
 }
-

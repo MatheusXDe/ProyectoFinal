@@ -19,6 +19,11 @@ public class PlayerMovementRogue : MonoBehaviour
     private Transform armRogue;
     private Vector3 velocity = Vector3.zero;
 
+    // 🎧 Audio de pasos
+    public AudioSource footstepAudioSource;
+    [SerializeField] private float stepDelay = 0.5f;
+    private float stepTimer;
+
 
 
 
@@ -63,6 +68,17 @@ public class PlayerMovementRogue : MonoBehaviour
         }
         // Aplicar la velocidad al CharacterController
         characterController.Move(velocity * Time.fixedDeltaTime);
+        // Reproducción de pasos 
+        if ((inputs.x != 0 || inputs.y != 0) && IsOnGround())
+        {
+            stepTimer += Time.fixedDeltaTime;
+            if (stepTimer >= stepDelay)
+            {
+                footstepAudioSource.Play();
+                stepTimer = 0f;
+            }
+
+        }
 
     }
 
