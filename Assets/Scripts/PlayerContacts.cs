@@ -7,7 +7,6 @@ public class PlayerContacts : MonoBehaviour
     private void Update()
     {
         UIManager.Call.BSmithOn(isEnter);
-        Cursor.visible = isEnter;
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -15,6 +14,7 @@ public class PlayerContacts : MonoBehaviour
         {
             isEnter = true;
             Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
         }
     }
 
@@ -23,6 +23,7 @@ public class PlayerContacts : MonoBehaviour
         if (other.CompareTag("Blacksmith")) {
             isEnter = false;
             Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
     }
 }
