@@ -47,5 +47,6 @@ public class HealthPlayer : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
         b.gameObject.SetActive(true);
+        Time.timeScale = 0;
     }
 }

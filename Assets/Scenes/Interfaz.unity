@@ -1761,6 +1761,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 871470138}
+        m_TargetAssemblyTypeName: PauseAtQ, Assembly-CSharp
+        m_MethodName: UnPause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &156906091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3512,6 +3524,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Cristhian
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 871470138}
+        m_TargetAssemblyTypeName: PauseAtQ, Assembly-CSharp
+        m_MethodName: UnPause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 522652506}
@@ -10172,6 +10196,7 @@ GameObject:
   - component: {fileID: 871470132}
   - component: {fileID: 871470136}
   - component: {fileID: 871470137}
+  - component: {fileID: 871470138}
   m_Layer: 5
   m_Name: UI Game
   m_TagString: Untagged
@@ -10255,11 +10280,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 667595737}
+  - {fileID: 289635164}
   - {fileID: 672670049}
   - {fileID: 1270221013}
   - {fileID: 609651056}
   - {fileID: 428196009}
-  - {fileID: 289635164}
   - {fileID: 522652507}
   - {fileID: 889310023}
   - {fileID: 1578007773}
@@ -10304,6 +10329,19 @@ MonoBehaviour:
   - {fileID: 1407671026}
   - {fileID: 1771154516}
   - {fileID: 375772783}
+--- !u!114 &871470138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871470131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f73a6e84a22a634f96fe8ea445d99f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pause: {fileID: 47763067}
 --- !u!1 &887192040
 GameObject:
   m_ObjectHideFlags: 0
@@ -11835,6 +11873,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 871470138}
+        m_TargetAssemblyTypeName: PauseAtQ, Assembly-CSharp
+        m_MethodName: UnPause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &963746520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12036,6 +12086,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 871470138}
+        m_TargetAssemblyTypeName: PauseAtQ, Assembly-CSharp
+        m_MethodName: UnPause
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
