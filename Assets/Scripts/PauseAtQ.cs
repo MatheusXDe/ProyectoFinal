@@ -21,4 +21,10 @@ public class PauseAtQ : MonoBehaviour
         Cursor.visible = false;
         Time.timeScale = 1;
     }
+    public void Quit2Menu()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+        Time.timeScale = 1;
+    }
 }
