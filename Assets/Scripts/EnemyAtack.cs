@@ -9,8 +9,8 @@ public class EnemyAtack : MonoBehaviour
     void Start()
     {
         healthPlayer = FindFirstObjectByType<HealthPlayer>();
-    
-        
+
+
     }
     public void OnTriggerEnter(Collider other)
     {
@@ -20,3 +20,4 @@ public class EnemyAtack : MonoBehaviour
         }
     }
 }
+
